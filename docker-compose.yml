@@ -17,11 +17,9 @@ services:
       - "3307:3306"
   website:
     container_name: prestashop
-    image: checkout.com/prestashop
+    image: youngmikelo/cko-prestashop
     build:
       context: .
-    volumes:
-      - ./apache2/sites-available:/etc/apache2/sites-available
     ports:
       - 80:80
     depends_on:
