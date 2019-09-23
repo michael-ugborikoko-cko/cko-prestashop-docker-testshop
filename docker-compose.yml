@@ -20,6 +20,8 @@ services:
     image: checkout.com/prestashop
     build:
       context: .
+    volumes:
+      - ./apache2/sites-available:/etc/apache2/sites-available
     ports:
       - 80:80
     depends_on:
